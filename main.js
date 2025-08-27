@@ -55,7 +55,7 @@ function textMetrics() {
   ctx.font = `bold ${baseFont}px w95, monospace`;
   const m = ctx.measureText(label);
   const w = m.width;
-  const h = baseFont:
+  const h = baseFont;
   return { w, h };
 }
 function randomHueShift() {
