@@ -3,16 +3,15 @@
     font-family: w95;
     src: url(W95FA.otf);
 }
-/*body*/
 body {
     background-color: #388081;
 }
-/*icons-mainscreen*/
 .icon-text {
     font-family: w95;
     font-weight: 100;
     color: white;
     font-size: 20px;
+    text-wrap: wrap;
 }
 .icon-ul {
     display: block;
@@ -21,11 +20,13 @@ body {
     margin-top: 10px;
     width: fit-content;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 .icon-li {
-    margin: 10px
+    margin: 10px;
+    width: 100px;
 }
-/*bottom-toolbar*/
 .bottom-toolbar {
     position: fixed;
     left: 0;
@@ -35,6 +36,7 @@ body {
     color: rgb(8 8 8);
     font-family: w95;
     border-top: 2px solid #c3c3c3;
+    z-index: 0;
 }
 .outerborder {
     border-top: 2.5px solid white;
@@ -159,7 +161,7 @@ body {
 .aboutme-cont {
     position: fixed;
     background-color: #c3c3c3;
-    top: 25%;
+    top: 50%;
     left: 50%;
     width: 75%;
     transform: translate(-50%, -50%);
@@ -222,7 +224,6 @@ body {
     border-bottom: 3px solid rgb(253 253 253);
     font-family: w95;
 }
-/* Retro Excel Style Portfolio Table */
 .portfolio-table {
     display: table;
     width: 100%;
@@ -230,44 +231,32 @@ body {
     font-family: w95, monospace;
     font-size: 14px;
 }
-
 .portfolio-row {
     display: table-row;
 }
-
 .portfolio-cell {
     display: table-cell;
     border: 1px solid black;
     padding: 4px 6px;
     vertical-align: middle;
 }
-/* Header row shading */
 .header-row {
     background-color: #e0e0e0;
     font-weight: bold;
 }
-
-/* Alternating rows */
 .portfolio-row:nth-child(even):not(.header-row) {
     background-color: #f9f9f9;
 }
-
-/* Hover effect */
 .portfolio-row:hover:not(.header-row) {
     background-color: #d0e6f5;
 }
-
-/* Links styling */
 .portfolio-cell a {
     color: blue;
     text-decoration: underline;
 }
-
-/* responsive 
- @media (max-width: 430px) {
-         Styles for screens up to 768px wide 
-        body {
-            font-size: 16px;
-        }
-
-    } */
+#nick-bouncer {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
